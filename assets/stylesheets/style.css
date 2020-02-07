@@ -5,6 +5,18 @@ html,body{
     box-sizing: border-box;
 }
 
+h3{
+    color: #e5e5e5;
+}
+
+a h3:hover{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
 .wrapper{
     min-width: 1050px;
     min-height: 100%;
@@ -125,4 +137,27 @@ html,body{
 
 .buttons img{
     width: 30px;
+}
+
+.small{
+    width: 230px;
+    height: 120px;
+    margin-right: 7px;
+    display: inline-flex;
+}
+
+.small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.entities{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.categories{
+    padding: 0 40px;
 }

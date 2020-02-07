@@ -38,12 +38,21 @@
             }
 
             $entitiesHtml = "";
+            $previewprovider = new PreviewProvide($this->con, $this->username);
 
             foreach($entities as $entity){
-                $entitiesHtml .= $entity->getName();
+                $entitiesHtml .= $previewprovider->createEntitySquare($entity);
             }
 
-            return $entitiesHtml . "<br>";
+            return "<div class='category'>
+                <a href='category.php?id=$categotyId'>
+                    <h3>$title</h3>
+                </a>
+
+                <div class='entities'>
+                    $entitiesHtml
+                </div>
+            </div>";
         }
     }
 
