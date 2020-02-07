@@ -1,0 +1,128 @@
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    min-width: 1050px;
+    min-height: 100%;
+    background-color: #141418;
+}
+
+.singinContainer{
+    background-color: #efefee;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column{
+    background-color: white;
+    width: 450px;
+    box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+    padding: 20px 35px;
+}
+
+.column form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputField{
+    font-size: 25px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #dedede;
+}
+
+.submit-button{
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 10px 12px;
+}
+
+.header h3{
+    font-size: 20px;
+    font-weight: 800;   
+}
+
+.logo{
+    width: 75px;
+    margin-top: 20px;
+}
+
+.signIn{
+    text-decoration: none;
+    font-size: 20px;
+    color: #442311;
+}
+
+.errorMessage{
+    color: #f00000;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.previewVideo, 
+.previewImage{
+    width: 100%;
+}
+
+.previewOverlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.previewContainer{
+    position: relative;
+    display: flex;
+}
+
+.previewContainer h3{
+    font-size: 25px;
+    color: #eee;
+    margin: 0;
+}
+
+.mainDetail{
+    position: relative;
+    top: 25%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.buttons button{
+    background-color: rgba(51,51,51,0.4);
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 2px;
+    margin-right: 5px;
+    font-size: 30px;
+}
+
+
+
+.buttons button:hover{
+    background-color: #e6e6e6;
+}
+
+
+.buttons img{
+    width: 30px;
+}
