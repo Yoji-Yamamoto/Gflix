@@ -13,7 +13,7 @@
             else{
                 $query = $this->con->prepare("SELECT * FROM entities WHERE id=:id");
                 $query->bindValue(":id", $input);
-                $quert->execute();
+                $query->execute();
 
                 $this->sqlData = $query->fetch(PDO::FETCH_ASSOC);
             }
