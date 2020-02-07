@@ -23,8 +23,27 @@
             $categotyId = $sqlData["id"];
             $title = $title == null ? $sqlData["name"]: $title;
 
-            
-            return $title . "<br>";
+            if($tvShows && $movies){
+                $entities = EntityProvide::getEntities($this->con, $categotyId, 30);
+            }
+            else if($tvShows){
+
+            }
+            else {
+
+            }
+
+            if(sizeof($entities) == 0){
+                return;
+            }
+
+            $entitiesHtml = "";
+
+            foreach($entities as $entity){
+                $entitiesHtml .= $entity->getName();
+            }
+
+            return $entitiesHtml . "<br>";
         }
     }
 
