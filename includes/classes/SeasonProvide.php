@@ -42,16 +42,16 @@
             $episodeNumber = $video->getEpisodeNumber();
 
             return "<a href='watch.php?id=$id'>
-                <div class='episodeContainer'>
-                    <div class='contents'>
-                        <img src='$thumbnail'>
+                        <div class='episodeContainer'>
+                            <div class='contents'>
+                                <img src='$thumbnail'>
 
-                        <div class='videoInfo'>
-                        <h4>$name</h4>
-                        <span>$description</span>
-                    </div>
-                </div>
-            </a>";
+                                <div class='videoInfo'>
+                                    <h4>$name</h4>
+                                <span>$description</span>
+                            </div>
+                        </div>
+                    </a>";
         }
     }
 

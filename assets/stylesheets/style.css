@@ -152,7 +152,8 @@ a{
     object-fit: cover;
 }
 
-.entities{
+.entities,
+.videos{
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -169,4 +170,51 @@ a{
     width: 100%;
     text-align: center;
     font-size: 30px;
+}
+
+.season{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+}
+
+.episodeContainer{
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.episodeContainer .contents{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+     margin-right: 8px;
+}
+
+.episodeContainer img{
+    width: 230px;
+    height: 131px;
+}
+
+
+
+
+.videoInfo h4,
+.videoInfo span{
+    color: White;
+    width: 100%;
+    white-space: normal;
+}
+
+.videoInfo{
+    max-height: 230px;
+    overflow-y: auto;
+   
+}
+
+.videoInfo h4,
+.videoInfo span{
+    color: White;
+    width: 100%;
+    white-space: normal;
 }
