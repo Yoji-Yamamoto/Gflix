@@ -28,6 +28,22 @@ function startTimer(){
     });
 }
 
-function initVideo(){
+function initVideo(videoId, username){
     startTimer();
+    updateProgressTimer(videoId, username)
+}
+
+function updateProgressTimer(videoId, username){
+    addDuration(videoId, username);
+
+    
+}
+
+function addDuration(videoId, username) {
+    $.post("ajax/addDuration.php", {videoId: videoId, username:username},
+     function(data){
+         if(data !== null && data !== ""){
+            alert(data);
+         } 
+    })
 }
