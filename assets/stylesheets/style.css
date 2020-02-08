@@ -218,3 +218,28 @@ a{
     width: 100%;
     white-space: normal;
 }
+
+.videoControl{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    background-color: rgba(0,0,0,0.3)
+}
+
+.videoControl img{
+    margin: 10px;
+    width: 80px;
+}
+
+.videoControl img{
+    margin: 10px;
+}
+
+.videoControl h3{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+button{
+    cursor: pointer;;
+}

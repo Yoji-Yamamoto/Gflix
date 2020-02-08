@@ -10,3 +10,24 @@ function previewEnd(){
     $(".previewVideo").toggle();
     $(".previewImage").toggle();
 }
+
+function goBack(){
+    window.history.back();
+}
+
+function startTimer(){
+    var timeout = null;
+
+    $(document).on("mouseover", function(){
+        clearTimeout(timeout);
+        $(".watchNav").fadeIn();
+        
+        timeout = setTimeout(function(){
+            $(".watchNav").fadeOut();
+        }, 2000);
+    });
+}
+
+function initVideo(){
+    startTimer();
+}
