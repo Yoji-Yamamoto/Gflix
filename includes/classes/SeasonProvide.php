@@ -14,11 +14,16 @@
                 return;
             }
             
+            $seasonsHtml = "";
             foreach($seasons as $season){
-                echo $season->getSeasonNumber() . "<br>";
+                $seasonNumber =  $season->getSeasonNumber();
+
+                $seasonsHtml .= "<div class='season'>
+                        <h3>Season $seasonNumber</h3>
+                </div>";
             }
 
-            //return $seasonsHtml;
+            return $seasonsHtml;
         }
     }
 
