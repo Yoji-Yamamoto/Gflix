@@ -2,7 +2,7 @@
     require_once("includes/header.php");
 
     if(!isset($_GET["id"])){
-        exit("No ID passed page");
+        ErrorMessage::show("No Id pass");
     }
 
     $entityId = $_GET["id"];
@@ -11,5 +11,7 @@
     $preview = new PreviewProvide($con, $userLoggedIn);
     echo $preview->createPreviewVideo($entity);
 
+    $seasonProvide = new SeasonProvide($con, $userLoggedIn);
+    echo $seasonProvide->create($entity);
 
 ?>
