@@ -10,6 +10,39 @@
 
         }
 
+        public function createCategoryPreview($categoryId){
+            $entitiesArray = EntityProvide::getEntities($this->con, $categoryId, 1);
+ 
+            if(sizeof($entitiesArray) == 0){
+                ErrorMessage::show("no tv shows");
+            }
+ 
+            return $this->createPreviewVideo($entitiesArray[0]);
+         }
+ 
+ 
+
+        public function createTvPreview(){
+           $entitiesArray = EntityProvide::getvShowEntities($this->con, null, 1);
+
+           if(sizeof($entitiesArray) == 0){
+               ErrorMessage::show("no tv shows");
+           }
+
+           return $this->createPreviewVideo($entitiesArray[0]);
+        }
+
+        public function createmoviePreview(){
+            $entitiesArray = EntityProvide::getmovieEntities($this->con, null, 1);
+ 
+            if(sizeof($entitiesArray) == 0){
+                ErrorMessage::show("no movie");
+            }
+ 
+            return $this->createPreviewVideo($entitiesArray[0]);
+         }
+ 
+
         public function createPreviewVideo($entity){
             if($entity == null){
                 $entity = $this->getRandomEntity();

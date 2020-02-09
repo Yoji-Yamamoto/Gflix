@@ -1,6 +1,9 @@
 <div class="topBar">
             <div class="logoContainer">
-                <img src="assets/images/logo.png" alt="">
+                <a href="index.php">
+                    <img src="assets/images/logo.png" alt="">
+                </a>
+               
             </div>
 
             <ul class="links">
