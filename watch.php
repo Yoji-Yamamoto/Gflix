@@ -1,4 +1,5 @@
 <?php
+    $hideNav = true;
     require_once("includes/header.php");
 
     if(!isset($_GET["id"])){
@@ -12,8 +13,7 @@
 <div class="watchContainer">
 
     <div class="videoControl watchNav">
-        <button onclick="goBack()">back</button>
-         <img src="assets/images/back.png">
+         <img src="assets/images/back.png" onclick="goBack()">
         <h3><?php echo $video->getTitle(); ?></h3>
     </div>
         <video controls autoplay>
