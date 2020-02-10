@@ -8,6 +8,8 @@
     require_once("includes/classes/SeasonProvide.php");
     require_once("includes/classes/Season.php");
     require_once("includes/classes/Video.php");
+    require_once("includes/classes/User.php");
+
 
 
 

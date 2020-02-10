@@ -11,6 +11,8 @@
                 <li><a href="movie.php">Movies</a></li>
             </ul>
 
+            <a href="logout.php" class="logout">logout</a>
+
             <div class="right">
                 <a href="profile.php"><img src="assets/images/profile-image.png"></a>
                 <a href="search.php"><img src="assets/images/search.png"></a>
