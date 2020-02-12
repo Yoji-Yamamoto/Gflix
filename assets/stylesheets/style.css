@@ -156,7 +156,7 @@ a{
     padding: 0 40px;
 }
 
-.category,
+.videos,
 .entities{
     overflow-x: auto;
     overflow-y: hidden;
@@ -344,3 +344,55 @@ button{
     display: inline-block;
     margin-left: 40px;
 }
+
+@media screen and (max-width:768px){
+    .wrapper{
+        min-width: 100%;
+    }
+    .topBar{
+        height: 50px;
+    }
+
+    .topBar a{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .topBar ul{
+        margin-top: 30px;
+    }
+
+    .topBar img{
+        width: 100px;
+        height: auto;
+    }
+
+    .mainDetail h3{
+        font-size: 25px;
+        white-space: nowrap;
+        margin: 15px;
+    }
+
+    .buttons button{
+        padding: 10px 25px;
+    }
+
+    .buttons button img{
+        width: 28px
+    }
+
+    .buttons button i{
+        font-size: 30px;  
+    }
+
+   .category h3{
+       font-size: 22px;
+   }
+
+   .categories h1{
+       font-size: 30px;
+   }
+
+  
+}
+

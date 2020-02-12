@@ -22,12 +22,11 @@
                 foreach($season->getVideos() as $video){
                     $videosHtml .= $this->createVideoSquare($video);
                 }
-
-                $seasonsHtml .= "<div class='season'>
-                        <h3>Season $seasonNumber</h3>
-                        <div class='videos'>
-                            $videosHtml
-                        </div>
+                    $seasonsHtml .= "<div class='season'>
+                    <h3>Season $seasonNumber</h3>
+                    <div class='videos'>
+                        $videosHtml
+                    </div>
                 </div>";
             }
 
@@ -48,7 +47,8 @@
 
                                 <div class='videoInfo'>
                                     <h4>$name</h4>
-                                <span>$description</span>
+                                    <span>$description</span>
+                                </div>
                             </div>
                         </div>
                     </a>";
