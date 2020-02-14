@@ -9,7 +9,8 @@
       $cleardb_username = "b5cd25d5d3d7f6";
       $cleardb_password = "ee97cce7";
       $cleardb_db       = "heroku_c03b3b0d50ee556";
-      $con = new PDO("mysql:dbname=$cleardb_db;host=$cleardb_server", "$cleardb_username","$cleardb_password");
+      $con = new PDO("mysql:dbname=$cleardb_db;host=$cleardb_server;charset=utf8;", "$cleardb_username","$cleardb_password");
+      //$con = new PDO("mysql:dbname=$cleardb_db;host=$cleardb_server", "$cleardb_username","$cleardb_password");
           //ローカル環境でのdb接続
         //    $con = new PDO("mysql:dbname=Gflix;host=localhost", "root","root");
       
