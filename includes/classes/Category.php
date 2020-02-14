@@ -11,8 +11,7 @@
             $query = $this->con->prepare("SELECT * FROM categories");
             $query->execute();
 
-            $html = "<div class='categories'>
-                        <h1>Tv show</h1>";
+            $html = "<div class='categories'>";
             while($row = $query->fetch(PDO::FETCH_ASSOC)){
                 $html .= $this->getCategoryHtml($row, null, true, false);
             }

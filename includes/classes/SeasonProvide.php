@@ -23,7 +23,6 @@
                     $videosHtml .= $this->createVideoSquare($video);
                 }
                     $seasonsHtml .= "<div class='season'>
-                    <h3>Season $seasonNumber</h3>
                     <div class='videos'>
                         $videosHtml
                     </div>
@@ -46,7 +45,7 @@
                                 <img src='$thumbnail'>
 
                                 <div class='videoInfo'>
-                                    <h4>$name</h4>
+                                    <h4>$episodeNumber. $name</h4>
                                     <span>$description</span>
                                 </div>
                             </div>

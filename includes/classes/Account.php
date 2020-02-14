@@ -7,17 +7,12 @@
             $this->con = $con;    
         }
 
-        public function updateDetail($fn, $ln, $em, $un){
-            $this->validateFirstName($fn);
-            $this->validateLastName($ln);
+        public function updateDetail($em, $un){
             $this->validatenewEmail($em, $un);
 
             if(empty($this->errorArray)){
                 //update
-                $query = $this->con->prepare("UPDATE users SET firstName=:fn, lastName=:ln, 
-                email=:em WHERE username=:un");
-                $query->bindValue(":fn", $fn);
-                $query->bindValue(":ln", $ln);
+                $query = $this->con->prepare("UPDATE users SET email=:em WHERE username=:un");
                 $query->bindValue(":em", $em);
                 $query->bindValue(":un", $un);
 
@@ -27,15 +22,12 @@
             return false;
         }
 
-        public function register($fn, $ln, $un, $em, $em2, $pw, $pw2){
-                $this->validateFirstName($fn);
-                $this->validateLastName($ln);
+        public function register($un, $em, $pw, $pw2){
                 $this->validateUsername($un);
-                $this->validateEmails($em, $em2);
                 $this->validatePasswords($pw, $pw2);
 
                 if(empty($this->errorArray)){
-                    return $this->insertUserDetails($fn, $ln, $un, $em, $pw);
+                    return $this->insertUserDetails($un, $em, $pw);
                 }
 
                 return false;
@@ -60,30 +52,16 @@
             return false;
         }
 
-        private function insertUserDetails($fn, $ln, $un, $em, $pw){
+        private function insertUserDetails($un, $em, $pw){
             $pw = hash("sha512", $pw);
-            $query = $this->con->prepare("INSERT INTO users (firstName,lastName,
-            username, email, password) VALUES(:fn, :ln, :un, :em, :pw)");
-            $query->bindValue(":fn", $fn);
-            $query->bindValue(":ln", $ln);
+            $query = $this->con->prepare("INSERT INTO users (username, email, password)
+             VALUES(:un, :em, :pw)");
             $query->bindValue(":un", $un);
             $query->bindValue(":em", $em);
             $query->bindValue(":pw", $pw);
 
             return $query->execute();
 
-        }
-
-        private function validateFirstName($fn){
-            if(strlen($fn) < 2 || strlen($fn) > 25){
-                array_push($this->errorArray, Constant::$firstNameLength);
-            }
-        }
-
-        private function validateLastName($ln){
-            if(strlen($ln) < 2 || strlen($ln) > 25){
-                array_push($this->errorArray, Constant::$lastNameLength);
-            }
         }
 
         private function validateUsername($un){

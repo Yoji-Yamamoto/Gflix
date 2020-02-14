@@ -23,7 +23,7 @@ a{
     background-color: #141418;
 }
 
-.singinContainer{
+.formContainer{
     background-color: #efefee;
     height: 100%;
     display: flex;
@@ -65,7 +65,8 @@ a{
 
 .header h3{
     font-size: 20px;
-    font-weight: 800;   
+    font-weight: 800;
+    color: #451122;   
 }
 
 .logo{
@@ -78,6 +79,7 @@ a{
     font-size: 20px;
     color: #442311;
 }
+
 
 .errorMessage{
     color: #f00000;
@@ -194,11 +196,8 @@ a{
 
 .episodeContainer img{
     width: 230px;
-    height: 131px;
+    height: 150px;
 }
-
-
-
 
 .videoInfo h4,
 .videoInfo span{
@@ -345,6 +344,21 @@ button{
     margin-left: 40px;
 }
 
+.testUser{
+    border: 2px solid #344221;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.testUserContainer{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.testUser h3{
+    color: #000;
+}
+
 @media screen and (max-width:768px){
     .wrapper{
         min-width: 100%;
@@ -353,6 +367,13 @@ button{
         height: 50px;
     }
 
+   
+    .column {
+        padding: 10px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
     .topBar a{
         font-size: 20px;
         font-weight: bold;
@@ -365,6 +386,12 @@ button{
     .topBar img{
         width: 100px;
         height: auto;
+    }
+
+    .right img{
+        width: 50px;
+        height: auto;
+        margin-left: 50px;
     }
 
     .mainDetail h3{
@@ -393,6 +420,17 @@ button{
        font-size: 30px;
    }
 
-  
+    .watchContainer video{
+        width: 100%;
+    }
+
+    .watchNav{
+        height: 100px;
+    }
+
+    .watchNav h3{
+        margin: 5px;
+        font-size: 28px;
+    }
 }
 

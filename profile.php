@@ -56,20 +56,14 @@
     <div class="form">
 
         <form action="" method="POST">
-            <h2>edit your profile</h2>
+            <h2>プロフィール編集</h2>
 
             <?php
                 $user = new User($con, $userLoggedIn);
-                $firstName = isset($_POST["firstName"]) ? $_POST["firstName"] : $user->getFirstName();
-                $lastName = isset($_POST["lastName"]) ? $_POST["lastName"] : $user->getlastName();
                 $email = isset($_POST["email"]) ? $_POST["email"] : $user->getEmail();
           
 
             ?>
-            <input type="text" name="firstName" class="inputField profile" 
-            value="<?php echo $firstName;?>">
-            <input type="text" name="lastName" class="inputField profile" 
-            value="<?php echo $lastName;?>">
             <input type="email" name="email" class="inputField profile" 
             value="<?php echo $email;?>">
 

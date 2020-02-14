@@ -27,10 +27,9 @@
             return $result;
         }
 
-        public static function getvShowEntities($con, $categoryId, $limit){
+        /*public static function getvShowEntities($con, $categoryId, $limit){
             $sql = "SELECT DISTINCT(entities.id) FROM `entities`
-                    INNER JOIN videos on entities.id = videos.entityId 
-                    WHERE videos.isMovie = 0 ";
+                    INNER JOIN videos on entities.id = videos.entityId";
 
             if($categoryId != null){
                 $sql .= "AND categoryId=:categoryId ";
@@ -81,7 +80,7 @@
             }
 
             return $result;
-        }
+        }*/
     }
 
 ?>

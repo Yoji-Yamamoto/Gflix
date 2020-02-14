@@ -37,7 +37,7 @@
 
         public function getSeasons(){
             $query = $this->con->prepare("SELECT * FROM videos WHERE entityId=:id
-            AND isMovie=0 ORDER BY season, episode ASC");
+            ORDER BY season, episode ASC");
             $query->bindValue(":id", $this->getId());
             $query->execute();
 

@@ -6,6 +6,6 @@
 
     $category = new Category($con, $userLoggedIn);
 
-    echo $category->showtvShowCategories(null);
+    echo $category->showAllCategories(null);
 
 ?>

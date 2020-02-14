@@ -37,23 +37,32 @@ $account = new Account($con);
     <title>welcome to Gflix</title>
 </head>
 <body>
-    <div class="singinContainer">
+    <div class="formContainer">
         <div class="column">
                 <div class="header">
                     <img src="assets/images/logo.png" alt="siteLogo" class="logo">
-                    <h3>Log in</h3>
+                    <h3>ログイン</h3>
                 </div>
             <form action="" method="POST">
                 <?php echo $account->getError(Constant::$loginFailed); ?>         
 
                 <input type="text" name="username" required class="inputField"
-                value="<?php getInputData("username"); ?>">
+                placeholder="お名前" value="<?php getInputData("username"); ?>">
                 <input type="password" name="password" required class="inputField"
-                value="<?php getInputData("password"); ?>">
+                placeholder="パスワード" value="<?php getInputData("password"); ?>">
                 <input type="submit" name="submitButton" class="submit-button" required>
             </form>
 
-            <a href="register.php" class="signIn">new user? please sign up</a>
+            <a href="register.php" class="signIn">新規登録はこちら</a>
+
+            <div class="testUser">
+                <div class="testUserContainer">
+                    <h1>テストユーザー</h1>
+
+                    <h3>お名前: useruser</h3>
+                    <h3>パスワード: useruser</h3>
+                </div>
+            </div>
         </div>
     </div>
 </body>
