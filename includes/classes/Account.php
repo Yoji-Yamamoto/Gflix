@@ -25,6 +25,7 @@
         public function register($un, $em, $pw, $pw2){
                 $this->validateUsername($un);
                 $this->validatePasswords($pw, $pw2);
+                $this->validateEmail($em);
 
                 if(empty($this->errorArray)){
                     return $this->insertUserDetails($un, $em, $pw);
@@ -55,7 +56,7 @@
         private function insertUserDetails($un, $em, $pw){
             $pw = hash("sha512", $pw);
             $query = $this->con->prepare("INSERT INTO users (username, email, password)
-             VALUES(:un, :em, :pw)");
+                                        VALUES(:un, :em, :pw)");
             $query->bindValue(":un", $un);
             $query->bindValue(":em", $em);
             $query->bindValue(":pw", $pw);
@@ -79,12 +80,8 @@
             }
         }
 
-        private function validateEmails($em, $em2){
-            if($em != $em2){
-                array_push($this->errorArray, Constant::$emailNotMatch);
-                return;
-            }
-
+        private function validateEmail($em){
+            
             if(!filter_var($em, FILTER_VALIDATE_EMAIL)){
                 array_push($this->errorArray, Constant::$emailInvalid);
                 return;

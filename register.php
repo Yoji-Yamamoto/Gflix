@@ -13,11 +13,11 @@
         $password2 = FormSanitize::sanitaizeFormPassword($_POST['password2']);
 
 
-        $success = $account->register($firstName, $lastName, $username, $email, $email2,
-    $password, $password2);
+        $success = $account->register($username, $email, $password, $password2);
         
         if($success){
             //store session
+            $_SESSION["userLoggedIn"] = $username;
             header("Location: index.php");
         }  
     }
@@ -48,6 +48,9 @@
                 </div>
             <form action="" method="POST">
 
+                <?php echo $account->getError(Constant::$usernameLength); ?>         
+                <?php echo $account->getError(Constant::$usernameTaken); ?>    
+
                 <input type="text" name="username" required class="inputField" 
                 placeholder= "お名前(5文字以上)" value="<?php getInputData("username"); ?>">
 
@@ -68,7 +71,7 @@
                 <input type="submit" name="submitButton" class="submit-button">
             </form>
 
-            <a href="login.php" class="signIn">アカウントをお持ちですか?ログインしてください</a>
+            　　<a href="login.php" class="signIn">ログインはこちら</a>
         </div>
     </div>
 </body>
